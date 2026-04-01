@@ -1,0 +1,1034 @@
+[
+  {
+    "subject": "Physics",
+    "exam": "JEE",
+    "difficulty": "easy",
+    "question": "What is acceleration due to gravity on Earth?",
+    "options": ["9.8 m/s^2", "10 m/s^2", "8.9 m/s^2", "12 m/s^2"],
+    "correctAnswer": "9.8 m/s^2",
+    "explanation": "Standard gravitational acceleration value."
+  },
+  {
+    "subject": "Physics",
+    "exam": "JEE",
+    "difficulty": "medium",
+    "question": "Unit of electric current?",
+    "options": ["Volt", "Ampere", "Ohm", "Watt"],
+    "correctAnswer": "Ampere",
+    "explanation": "Electric current is measured in Ampere."
+  },
+  {
+    "subject": "Physics",
+    "exam": "JEE",
+    "difficulty": "hard",
+    "question": "Magnetic flux unit?",
+    "options": ["Tesla", "Weber", "Henry", "Joule"],
+    "correctAnswer": "Weber",
+    "explanation": "Magnetic flux is measured in Weber."
+  },
+
+  {
+    "subject": "Mathematics",
+    "exam": "JEE",
+    "difficulty": "easy",
+    "question": "Derivative of sin(x)?",
+    "options": ["cos(x)", "-cos(x)", "-sin(x)", "tan(x)"],
+    "correctAnswer": "cos(x)",
+    "explanation": "Derivative of sin(x) is cos(x)."
+  },
+  {
+    "subject": "Mathematics",
+    "exam": "JEE",
+    "difficulty": "medium",
+    "question": "Integral of 1/x dx?",
+    "options": ["ln|x|", "x", "1/x", "e^x"],
+    "correctAnswer": "ln|x|",
+    "explanation": "Integral of 1/x is ln|x| + C."
+  },
+  {
+    "subject": "Mathematics",
+    "exam": "JEE",
+    "difficulty": "hard",
+    "question": "Value of limit (sin x)/x as x→0?",
+    "options": ["0", "1", "∞", "-1"],
+    "correctAnswer": "1",
+    "explanation": "Standard limit result."
+  },
+
+  {
+    "subject": "Chemistry",
+    "exam": "JEE",
+    "difficulty": "easy",
+    "question": "Atomic number of Carbon?",
+    "options": ["6", "8", "12", "14"],
+    "correctAnswer": "6",
+    "explanation": "Carbon has atomic number 6."
+  },
+  {
+    "subject": "Chemistry",
+    "exam": "JEE",
+    "difficulty": "medium",
+    "question": "pH of neutral solution?",
+    "options": ["5", "6", "7", "8"],
+    "correctAnswer": "7",
+    "explanation": "Neutral solution has pH 7."
+  },
+  {
+    "subject": "Chemistry",
+    "exam": "JEE",
+    "difficulty": "hard",
+    "question": "Avogadro number?",
+    "options": ["6.022×10^23", "3.14", "9.8", "1.6×10^-19"],
+    "correctAnswer": "6.022×10^23",
+    "explanation": "Avogadro constant."
+  },
+
+  {
+    "subject": "Biology",
+    "exam": "NEET",
+    "difficulty": "easy",
+    "question": "Basic unit of life?",
+    "options": ["Atom", "Cell", "Tissue", "Organ"],
+    "correctAnswer": "Cell",
+    "explanation": "Cell is fundamental unit."
+  },
+  {
+    "subject": "Biology",
+    "exam": "NEET",
+    "difficulty": "medium",
+    "question": "DNA full form?",
+    "options": ["Deoxyribonucleic Acid", "Dynamic Acid", "Dual Acid", "None"],
+    "correctAnswer": "Deoxyribonucleic Acid",
+    "explanation": "DNA stands for Deoxyribonucleic Acid."
+  },
+  {
+    "subject": "Biology",
+    "exam": "NEET",
+    "difficulty": "hard",
+    "question": "Photosynthesis occurs in?",
+    "options": ["Mitochondria", "Chloroplast", "Nucleus", "Ribosome"],
+    "correctAnswer": "Chloroplast",
+    "explanation": "Photosynthesis occurs in chloroplast."
+  },
+
+  {
+    "subject": "Physics",
+    "exam": "NEET",
+    "difficulty": "medium",
+    "question": "Work formula?",
+    "options": ["F/d", "F × d", "F + d", "F - d"],
+    "correctAnswer": "F × d",
+    "explanation": "Work = Force × Displacement."
+  },
+
+  {
+    "subject": "Mathematics",
+    "exam": "Board",
+    "difficulty": "easy",
+    "question": "5 + 7 = ?",
+    "options": ["10", "11", "12", "13"],
+    "correctAnswer": "12",
+    "explanation": "5 + 7 = 12."
+  },
+  {
+    "subject": "Physics",
+    "exam": "Board",
+    "difficulty": "medium",
+    "question": "SI unit of force?",
+    "options": ["Newton", "Joule", "Watt", "Pascal"],
+    "correctAnswer": "Newton",
+    "explanation": "Force is measured in Newton."
+  },
+  {
+    "subject": "Chemistry",
+    "exam": "Board",
+    "difficulty": "easy",
+    "question": "Chemical symbol of Sodium?",
+    "options": ["Na", "So", "S", "N"],
+    "correctAnswer": "Na",
+    "explanation": "Symbol is Na."
+  },
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Unit of force is?",
+  "options": ["Newton", "Joule", "Watt", "Pascal"],
+  "correctAnswer": "Newton",
+  "explanation": "Force is measured in Newton."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Speed is defined as?",
+  "options": ["Distance/Time", "Time/Distance", "Mass × Acceleration", "Force/Area"],
+  "correctAnswer": "Distance/Time",
+  "explanation": "Speed equals distance divided by time."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Kinetic energy formula?",
+  "options": ["1/2 mv^2", "mv", "mgh", "F × d"],
+  "correctAnswer": "1/2 mv^2",
+  "explanation": "Kinetic energy equals half mass times velocity squared."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Unit of power?",
+  "options": ["Watt", "Newton", "Joule", "Volt"],
+  "correctAnswer": "Watt",
+  "explanation": "Power is measured in Watt."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Escape velocity on Earth is approximately?",
+  "options": ["11.2 km/s", "9.8 km/s", "7 km/s", "5 km/s"],
+  "correctAnswer": "11.2 km/s",
+  "explanation": "Escape velocity from Earth is about 11.2 km/s."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Derivative of x^2?",
+  "options": ["2x", "x", "x^3", "1"],
+  "correctAnswer": "2x",
+  "explanation": "Derivative of x^2 is 2x."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "sin(90°) equals?",
+  "options": ["1", "0", "-1", "0.5"],
+  "correctAnswer": "1",
+  "explanation": "sin 90 degrees equals 1."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Integral of x dx?",
+  "options": ["x^2/2", "2x", "x", "ln x"],
+  "correctAnswer": "x^2/2",
+  "explanation": "Integral of x is x squared divided by 2 plus constant."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Determinant of 2x2 matrix formula?",
+  "options": ["ad - bc", "a+b+c+d", "ab+cd", "ac - bd"],
+  "correctAnswer": "ad - bc",
+  "explanation": "Determinant of 2x2 matrix equals ad minus bc."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Symbol of Oxygen?",
+  "options": ["O", "Ox", "Og", "On"],
+  "correctAnswer": "O",
+  "explanation": "Oxygen chemical symbol is O."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Valency of Carbon?",
+  "options": ["4", "2", "3", "1"],
+  "correctAnswer": "4",
+  "explanation": "Carbon has valency 4."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Bond angle in methane?",
+  "options": ["109.5°", "90°", "120°", "180°"],
+  "correctAnswer": "109.5°",
+  "explanation": "Methane has tetrahedral structure with bond angle 109.5 degrees."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Human blood group system is?",
+  "options": ["ABO", "XYZ", "LMN", "RST"],
+  "correctAnswer": "ABO",
+  "explanation": "Human blood groups are classified under ABO system."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Largest organ in human body?",
+  "options": ["Skin", "Heart", "Liver", "Brain"],
+  "correctAnswer": "Skin",
+  "explanation": "Skin is the largest organ of the human body."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Mendel worked on which plant?",
+  "options": ["Pea", "Wheat", "Rice", "Maize"],
+  "correctAnswer": "Pea",
+  "explanation": "Mendel conducted experiments on pea plants."
+},
+
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Acceleration formula?",
+  "options": ["v-u/t", "F/m", "s/t", "mgh"],
+  "correctAnswer": "v-u/t",
+  "explanation": "Acceleration equals change in velocity divided by time."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "pH less than 7 indicates?",
+  "options": ["Acidic", "Basic", "Neutral", "Salt"],
+  "correctAnswer": "Acidic",
+  "explanation": "Solutions with pH less than 7 are acidic."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Roots of quadratic formula?",
+  "options": ["(-b ± √(b²-4ac))/2a", "b²-4ac", "2a", "-b/a"],
+  "correctAnswer": "(-b ± √(b²-4ac))/2a",
+  "explanation": "Quadratic formula gives roots of ax²+bx+c=0."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Momentum is defined as?",
+  "options": ["Mass × Velocity", "Force × Time", "Energy × Time", "Mass / Velocity"],
+  "correctAnswer": "Mass × Velocity",
+  "explanation": "Momentum equals mass multiplied by velocity."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Centripetal force formula?",
+  "options": ["mv^2/r", "mr^2/v", "mvr", "v^2/mr"],
+  "correctAnswer": "mv^2/r",
+  "explanation": "Centripetal force equals mass times velocity squared divided by radius."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "If log10 100 = ?",
+  "options": ["2", "1", "10", "0"],
+  "correctAnswer": "2",
+  "explanation": "Log base 10 of 100 equals 2."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Derivative of e^x?",
+  "options": ["e^x", "x e^x", "1", "ln x"],
+  "correctAnswer": "e^x",
+  "explanation": "Derivative of e raised to x is e^x."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Molar mass of water (H2O)?",
+  "options": ["18 g/mol", "16 g/mol", "20 g/mol", "10 g/mol"],
+  "correctAnswer": "18 g/mol",
+  "explanation": "Molar mass of water is 18 grams per mole."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Oxidation involves?",
+  "options": ["Loss of electrons", "Gain of electrons", "Gain of protons", "Loss of neutrons"],
+  "correctAnswer": "Loss of electrons",
+  "explanation": "Oxidation is defined as loss of electrons."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Site of protein synthesis?",
+  "options": ["Ribosome", "Nucleus", "Mitochondria", "Chloroplast"],
+  "correctAnswer": "Ribosome",
+  "explanation": "Proteins are synthesized in ribosomes."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Heart has how many chambers?",
+  "options": ["4", "3", "2", "5"],
+  "correctAnswer": "4",
+  "explanation": "Human heart consists of four chambers."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Enzyme that unwinds DNA?",
+  "options": ["Helicase", "Ligase", "Polymerase", "Amylase"],
+  "correctAnswer": "Helicase",
+  "explanation": "Helicase unwinds the DNA double helix."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "SI unit of charge?",
+  "options": ["Coulomb", "Ampere", "Volt", "Ohm"],
+  "correctAnswer": "Coulomb",
+  "explanation": "Electric charge is measured in Coulomb."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Frequency unit?",
+  "options": ["Hertz", "Joule", "Newton", "Watt"],
+  "correctAnswer": "Hertz",
+  "explanation": "Frequency is measured in Hertz."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Gas essential for respiration?",
+  "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
+  "correctAnswer": "Oxygen",
+  "explanation": "Oxygen is required for cellular respiration."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Chemical formula of glucose?",
+  "options": ["C6H12O6", "CO2", "H2O", "NaCl"],
+  "correctAnswer": "C6H12O6",
+  "explanation": "Glucose formula is C6H12O6."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Area of circle formula?",
+  "options": ["πr^2", "2πr", "πd", "r^2"],
+  "correctAnswer": "πr^2",
+  "explanation": "Area of circle equals pi times radius squared."
+},
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Refractive index formula?",
+  "options": ["c/v", "v/c", "cv", "c+v"],
+  "correctAnswer": "c/v",
+  "explanation": "Refractive index equals speed of light divided by speed in medium."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Chemical formula of sulfuric acid?",
+  "options": ["H2SO4", "HCl", "HNO3", "NaOH"],
+  "correctAnswer": "H2SO4",
+  "explanation": "Sulfuric acid formula is H2SO4."
+},
+{
+  "subject": "Biology",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Process by which plants make food?",
+  "options": ["Photosynthesis", "Respiration", "Digestion", "Transpiration"],
+  "correctAnswer": "Photosynthesis",
+  "explanation": "Plants prepare food by photosynthesis."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Value of π approximately?",
+  "options": ["3.14", "2.14", "4.13", "3.41"],
+  "correctAnswer": "3.14",
+  "explanation": "Approximate value of pi is 3.14."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Hooke's law states?",
+  "options": ["F = -kx", "F = ma", "P = mv", "E = mc^2"],
+  "correctAnswer": "F = -kx",
+  "explanation": "Hooke's law states force is proportional to displacement."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Electronegativity increases across period from?",
+  "options": ["Left to right", "Right to left", "Top to bottom", "Bottom to top"],
+  "correctAnswer": "Left to right",
+  "explanation": "Electronegativity increases across a period from left to right."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Dimensional formula of force?",
+  "options": ["MLT^-2", "ML^2T^-2", "M^-1LT^-2", "MLT^-1"],
+  "correctAnswer": "MLT^-2",
+  "explanation": "Force = mass × acceleration, so dimensions are MLT^-2."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Time period of simple pendulum depends on?",
+  "options": ["Length", "Mass", "Amplitude", "Density"],
+  "correctAnswer": "Length",
+  "explanation": "Time period depends on length and gravity, not mass."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Gauss law relates electric flux with?",
+  "options": ["Enclosed charge", "Magnetic field", "Resistance", "Potential"],
+  "correctAnswer": "Enclosed charge",
+  "explanation": "Gauss law states electric flux equals enclosed charge divided by permittivity."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Value of cos(0°)?",
+  "options": ["1", "0", "-1", "0.5"],
+  "correctAnswer": "1",
+  "explanation": "Cosine of zero degree equals 1."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Sum of first n natural numbers?",
+  "options": ["n(n+1)/2", "n^2", "2n", "n(n-1)/2"],
+  "correctAnswer": "n(n+1)/2",
+  "explanation": "Standard formula for sum of first n natural numbers."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Derivative of ln(x)?",
+  "options": ["1/x", "x", "ln(x)", "e^x"],
+  "correctAnswer": "1/x",
+  "explanation": "Derivative of natural logarithm is 1/x."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Periodic table arranged by?",
+  "options": ["Atomic number", "Mass number", "Density", "Valency"],
+  "correctAnswer": "Atomic number",
+  "explanation": "Modern periodic table arranged by atomic number."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Strong acid among these?",
+  "options": ["HCl", "CH3COOH", "NH4OH", "H2O"],
+  "correctAnswer": "HCl",
+  "explanation": "Hydrochloric acid is strong acid."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Hybridization of carbon in ethene?",
+  "options": ["sp2", "sp3", "sp", "dsp2"],
+  "correctAnswer": "sp2",
+  "explanation": "Carbon in ethene is sp2 hybridized."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Vitamin C deficiency causes?",
+  "options": ["Scurvy", "Rickets", "Anemia", "Goitre"],
+  "correctAnswer": "Scurvy",
+  "explanation": "Vitamin C deficiency leads to scurvy."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Structural unit of kidney?",
+  "options": ["Nephron", "Neuron", "Alveoli", "Atrium"],
+  "correctAnswer": "Nephron",
+  "explanation": "Nephron is functional unit of kidney."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "During which phase DNA replication occurs?",
+  "options": ["S phase", "G1", "G2", "M phase"],
+  "correctAnswer": "S phase",
+  "explanation": "DNA replication occurs in S phase of cell cycle."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Pressure equals?",
+  "options": ["Force/Area", "Area/Force", "Force × Area", "Mass/Volume"],
+  "correctAnswer": "Force/Area",
+  "explanation": "Pressure equals force divided by area."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Internal energy of ideal gas depends on?",
+  "options": ["Temperature", "Pressure", "Volume", "Density"],
+  "correctAnswer": "Temperature",
+  "explanation": "Internal energy depends only on temperature."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Enzyme is chemically?",
+  "options": ["Protein", "Lipid", "Carbohydrate", "Mineral"],
+  "correctAnswer": "Protein",
+  "explanation": "Most enzymes are proteins."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "pH scale range?",
+  "options": ["0-14", "1-7", "0-7", "7-14"],
+  "correctAnswer": "0-14",
+  "explanation": "pH scale ranges from 0 to 14."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Slope formula?",
+  "options": ["(y2-y1)/(x2-x1)", "(x2-x1)/(y2-y1)", "x/y", "y/x"],
+  "correctAnswer": "(y2-y1)/(x2-x1)",
+  "explanation": "Slope equals change in y divided by change in x."
+},
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Heat capacity unit?",
+  "options": ["J/K", "J", "K", "W"],
+  "correctAnswer": "J/K",
+  "explanation": "Heat capacity unit is joule per kelvin."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Electrolysis is based on?",
+  "options": ["Electric current", "Magnetism", "Heat", "Light"],
+  "correctAnswer": "Electric current",
+  "explanation": "Electrolysis uses electric current for chemical reaction."
+},
+{
+  "subject": "Biology",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Transport of water in plants occurs through?",
+  "options": ["Xylem", "Phloem", "Stomata", "Roots"],
+  "correctAnswer": "Xylem",
+  "explanation": "Xylem transports water in plants."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "SI unit of angular velocity?",
+  "options": ["rad/s", "m/s", "Hz", "rpm"],
+  "correctAnswer": "rad/s",
+  "explanation": "Angular velocity is measured in radians per second."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Work done in circular motion is?",
+  "options": ["Zero", "Maximum", "Minimum", "Infinite"],
+  "correctAnswer": "Zero",
+  "explanation": "Force is perpendicular to displacement in circular motion, so work done is zero."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Capacitance of parallel plate capacitor increases with?",
+  "options": ["Plate area", "Distance between plates", "Resistance", "Voltage"],
+  "correctAnswer": "Plate area",
+  "explanation": "Capacitance is directly proportional to plate area."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "If a^0 equals?",
+  "options": ["1", "0", "a", "-1"],
+  "correctAnswer": "1",
+  "explanation": "Any non-zero number raised to zero equals 1."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Equation of straight line form?",
+  "options": ["y = mx + c", "ax^2 + bx + c", "x^2 + y^2", "xy = 1"],
+  "correctAnswer": "y = mx + c",
+  "explanation": "Slope intercept form of straight line is y = mx + c."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "If vectors are perpendicular, their dot product is?",
+  "options": ["Zero", "One", "Infinity", "-1"],
+  "correctAnswer": "Zero",
+  "explanation": "Dot product of perpendicular vectors is zero."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Noble gases belong to which group?",
+  "options": ["18", "1", "17", "2"],
+  "correctAnswer": "18",
+  "explanation": "Noble gases are in group 18 of periodic table."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Catalyst increases rate by?",
+  "options": ["Lowering activation energy", "Increasing temperature", "Increasing mass", "Changing product"],
+  "correctAnswer": "Lowering activation energy",
+  "explanation": "Catalysts lower activation energy."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Coordination number of NaCl crystal?",
+  "options": ["6", "4", "8", "2"],
+  "correctAnswer": "6",
+  "explanation": "Each Na+ is surrounded by 6 Cl- ions."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Number of chromosomes in human somatic cell?",
+  "options": ["46", "23", "44", "48"],
+  "correctAnswer": "46",
+  "explanation": "Humans have 46 chromosomes in somatic cells."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Hormone regulating blood sugar?",
+  "options": ["Insulin", "Adrenaline", "Thyroxine", "Testosterone"],
+  "correctAnswer": "Insulin",
+  "explanation": "Insulin regulates blood glucose levels."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Genetic material in viruses can be?",
+  "options": ["DNA or RNA", "Only DNA", "Only RNA", "Protein"],
+  "correctAnswer": "DNA or RNA",
+  "explanation": "Viruses may contain either DNA or RNA."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Buoyant force depends on?",
+  "options": ["Density of fluid", "Color", "Shape only", "Temperature only"],
+  "correctAnswer": "Density of fluid",
+  "explanation": "Buoyant force depends on fluid density."
+},
+{
+  "subject": "Physics",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Half-life is time for quantity to become?",
+  "options": ["Half", "Double", "Zero", "Triple"],
+  "correctAnswer": "Half",
+  "explanation": "Half-life is time taken for quantity to reduce to half."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Carbohydrates are composed of?",
+  "options": ["C,H,O", "C,H,N", "H,O", "C,O,N"],
+  "correctAnswer": "C,H,O",
+  "explanation": "Carbohydrates contain carbon, hydrogen and oxygen."
+},
+{
+  "subject": "Chemistry",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Rate law expresses relation between?",
+  "options": ["Rate and concentration", "Rate and temperature only", "Mass and volume", "Energy and pressure"],
+  "correctAnswer": "Rate and concentration",
+  "explanation": "Rate law relates reaction rate to reactant concentration."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Mean of 2 and 6?",
+  "options": ["4", "3", "2", "6"],
+  "correctAnswer": "4",
+  "explanation": "Mean equals (2+6)/2 = 4."
+},
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Density formula?",
+  "options": ["Mass/Volume", "Volume/Mass", "Mass×Volume", "Mass+Volume"],
+  "correctAnswer": "Mass/Volume",
+  "explanation": "Density equals mass divided by volume."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Rusting requires?",
+  "options": ["Oxygen and water", "Nitrogen only", "Carbon dioxide only", "Helium"],
+  "correctAnswer": "Oxygen and water",
+  "explanation": "Rusting requires oxygen and moisture."
+},
+{
+  "subject": "Biology",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Gas released during photosynthesis?",
+  "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+  "correctAnswer": "Oxygen",
+  "explanation": "Photosynthesis releases oxygen."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Unit of electric charge?",
+  "options": ["Coulomb", "Volt", "Ohm", "Watt"],
+  "correctAnswer": "Coulomb",
+  "explanation": "Electric charge is measured in coulomb."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Time period of simple pendulum depends on?",
+  "options": ["Length", "Mass", "Amplitude only", "Color"],
+  "correctAnswer": "Length",
+  "explanation": "Time period depends on length and gravity, not mass."
+},
+{
+  "subject": "Physics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Escape velocity is independent of?",
+  "options": ["Mass of object", "Mass of planet", "Radius of planet", "Gravitational constant"],
+  "correctAnswer": "Mass of object",
+  "explanation": "Escape velocity does not depend on the mass of the escaping body."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Derivative of constant is?",
+  "options": ["0", "1", "Constant", "Infinity"],
+  "correctAnswer": "0",
+  "explanation": "Derivative of any constant is zero."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "Value of sin 90°?",
+  "options": ["1", "0", "-1", "1/2"],
+  "correctAnswer": "1",
+  "explanation": "sin 90 degrees equals 1."
+},
+{
+  "subject": "Mathematics",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "If determinant of matrix is zero, matrix is?",
+  "options": ["Singular", "Identity", "Orthogonal", "Diagonal"],
+  "correctAnswer": "Singular",
+  "explanation": "Matrix with zero determinant is singular."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "easy",
+  "question": "Atomic number represents?",
+  "options": ["Number of protons", "Neutrons", "Electrons only", "Mass number"],
+  "correctAnswer": "Number of protons",
+  "explanation": "Atomic number equals number of protons."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "medium",
+  "question": "pH less than 7 indicates?",
+  "options": ["Acidic solution", "Basic solution", "Neutral", "Salt only"],
+  "correctAnswer": "Acidic solution",
+  "explanation": "pH below 7 means acidic."
+},
+{
+  "subject": "Chemistry",
+  "exam": "JEE",
+  "difficulty": "hard",
+  "question": "Hybridization of carbon in methane?",
+  "options": ["sp3", "sp2", "sp", "dsp2"],
+  "correctAnswer": "sp3",
+  "explanation": "Carbon in methane is sp3 hybridized."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "easy",
+  "question": "Functional unit of kidney?",
+  "options": ["Nephron", "Neuron", "Alveolus", "Villus"],
+  "correctAnswer": "Nephron",
+  "explanation": "Nephron is the structural and functional unit of kidney."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "medium",
+  "question": "Cell wall of plants made of?",
+  "options": ["Cellulose", "Chitin", "Protein", "Lipid"],
+  "correctAnswer": "Cellulose",
+  "explanation": "Plant cell wall is mainly cellulose."
+},
+{
+  "subject": "Biology",
+  "exam": "NEET",
+  "difficulty": "hard",
+  "question": "Crossing over occurs during?",
+  "options": ["Prophase I", "Metaphase", "Anaphase", "Telophase"],
+  "correctAnswer": "Prophase I",
+  "explanation": "Crossing over occurs in prophase I of meiosis."
+},
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Unit of pressure?",
+  "options": ["Pascal", "Joule", "Newton", "Ampere"],
+  "correctAnswer": "Pascal",
+  "explanation": "Pressure is measured in pascal."
+},
+{
+  "subject": "Physics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Heat flows from?",
+  "options": ["High temperature to low", "Low to high", "Equal to equal", "Cold to hot only"],
+  "correctAnswer": "High temperature to low",
+  "explanation": "Heat flows from higher to lower temperature."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Chemical symbol of potassium?",
+  "options": ["K", "P", "Pt", "Po"],
+  "correctAnswer": "K",
+  "explanation": "Potassium symbol is K."
+},
+{
+  "subject": "Chemistry",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Water is example of?",
+  "options": ["Compound", "Element", "Mixture", "Alloy"],
+  "correctAnswer": "Compound",
+  "explanation": "Water is compound of hydrogen and oxygen."
+},
+{
+  "subject": "Biology",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Largest organ of human body?",
+  "options": ["Skin", "Heart", "Brain", "Liver"],
+  "correctAnswer": "Skin",
+  "explanation": "Skin is the largest organ."
+},
+{
+  "subject": "Biology",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Blood group without antibodies?",
+  "options": ["AB", "A", "B", "O"],
+  "correctAnswer": "AB",
+  "explanation": "AB blood group has no anti-A or anti-B antibodies."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "easy",
+  "question": "Square root of 144?",
+  "options": ["12", "14", "10", "16"],
+  "correctAnswer": "12",
+  "explanation": "12 × 12 = 144."
+},
+{
+  "subject": "Mathematics",
+  "exam": "Board",
+  "difficulty": "medium",
+  "question": "Sum of first n natural numbers formula?",
+  "options": ["n(n+1)/2", "n^2", "n(n-1)", "2n"],
+  "correctAnswer": "n(n+1)/2",
+  "explanation": "Formula for sum of first n natural numbers is n(n+1)/2."
+}
+]
