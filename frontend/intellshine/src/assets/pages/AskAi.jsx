@@ -51,7 +51,7 @@ const AskAi = ({ open, setOpen }) => {
       const res = await axios.post(
         "http://localhost:5000/api/chat",
         { message: input, mode },
-        { headers: { Authorization: `Bearer ${token}` } }
+        { headers: { Authorization: `Bearer ${token}` } },
       );
 
       typeWriter(res.data.reply);
@@ -119,7 +119,7 @@ const AskAi = ({ open, setOpen }) => {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-700 hover:bg-blue-800 text-white px-5 py-3 rounded-full shadow-xl z-50"
+          className="fixed bottom-6 right-6 bg-blue-700 hover:bg-blue-800 text-white px-5 py-3 rounded-full shadow-xl z-50 dark:bg-blue-600 dark:hover:bg-blue-700"
         >
           Ask AI
         </button>
@@ -131,15 +131,15 @@ const AskAi = ({ open, setOpen }) => {
             fullscreen
               ? "inset-0"
               : "bottom-6 right-6 w-[95%] sm:w-[400px] h-[600px]"
-          } bg-white shadow-2xl rounded-xl flex flex-col z-50 border border-blue-200`}
+          } card !border-blue-200 !bg-white dark:!bg-gray-900 shadow-2xl rounded-xl flex flex-col z-50`}
         >
           {/* Header */}
-          <div className="bg-blue-700 text-white p-4 flex justify-between items-center rounded-t-xl">
+          <div className="bg-blue-700 dark:bg-blue-600 text-white p-4 flex justify-between items-center rounded-t-xl">
             <div>
               <h2 className="font-semibold text-lg">
                 IntelliShine AI Assistant
               </h2>
-              <p className="text-xs opacity-80">
+              <p className="text-xs opacity-90">
                 Default: Short 5–6 line answer
               </p>
             </div>
@@ -153,11 +153,11 @@ const AskAi = ({ open, setOpen }) => {
           </div>
 
           {/* Mode Selector */}
-          <div className="p-3 border-b">
+          <div className="p-3 border-b border-gray-200 dark:border-gray-800">
             <select
               value={mode}
               onChange={(e) => setMode(e.target.value)}
-              className="w-full border border-blue-300 p-2 rounded focus:outline-blue-600"
+              className="input"
             >
               <option value="quick">Short Answer</option>
               <option value="detailed">Detailed Explanation</option>
@@ -166,7 +166,7 @@ const AskAi = ({ open, setOpen }) => {
           </div>
 
           {/* Chat Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-blue-50">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-blue-50 dark:bg-gray-900">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -175,8 +175,8 @@ const AskAi = ({ open, setOpen }) => {
                 <div
                   className={
                     msg.sender === "user"
-                      ? "inline-block bg-blue-700 text-white px-4 py-2 rounded-lg max-w-[80%]"
-                      : "inline-block bg-white border border-blue-200 px-4 py-2 rounded-lg max-w-[80%] shadow-sm"
+                      ? "inline-block bg-blue-700 dark:bg-blue-600 text-white px-4 py-2 rounded-lg max-w-[80%]"
+                      : "inline-block bg-white dark:bg-gray-800 border border-blue-200 dark:border-gray-700 px-4 py-2 rounded-lg max-w-[80%] shadow-sm text-gray-900 dark:text-gray-100"
                   }
                 >
                   {msg.sender === "ai" ? (
@@ -184,13 +184,22 @@ const AskAi = ({ open, setOpen }) => {
                       remarkPlugins={[remarkGfm]}
                       components={{
                         table: (props) => (
-                          <table className="border w-full my-2 text-sm" {...props} />
+                          <table
+                            className="border w-full my-2 text-sm dark:border-gray-700"
+                            {...props}
+                          />
                         ),
                         th: (props) => (
-                          <th className="border px-2 py-1 bg-blue-100" {...props} />
+                          <th
+                            className="border px-2 py-1 bg-blue-100 dark:bg-gray-700 dark:border-gray-700"
+                            {...props}
+                          />
                         ),
                         td: (props) => (
-                          <td className="border px-2 py-1" {...props} />
+                          <td
+                            className="border px-2 py-1 dark:border-gray-700"
+                            {...props}
+                          />
                         ),
                       }}
                     >
@@ -204,13 +213,15 @@ const AskAi = ({ open, setOpen }) => {
             ))}
 
             {loading && (
-              <p className="text-sm text-blue-600">Generating response...</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400">
+                Generating response...
+              </p>
             )}
 
             {isTyping && (
               <button
                 onClick={stopTyping}
-                className="text-red-600 text-sm underline"
+                className="text-red-600 dark:text-red-400 text-sm underline"
               >
                 Stop Generating
               </button>
@@ -220,11 +231,11 @@ const AskAi = ({ open, setOpen }) => {
           </div>
 
           {/* Input Area */}
-          <div className="p-4 border-t">
+          <div className="p-4 border-t border-gray-200 dark:border-gray-800">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="w-full border border-blue-300 p-3 rounded mb-3 focus:outline-blue-600"
+              className="input p-3 mb-3"
               placeholder="Ask your academic question..."
               rows="3"
             />
@@ -232,15 +243,12 @@ const AskAi = ({ open, setOpen }) => {
             <div className="flex justify-between">
               <button
                 onClick={clearChat}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                className="btn btn-ghost text-blue-700 dark:text-blue-400"
               >
                 Clear
               </button>
 
-              <button
-                onClick={sendMessage}
-                className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded"
-              >
+              <button onClick={sendMessage} className="btn btn-primary px-6">
                 Send
               </button>
             </div>

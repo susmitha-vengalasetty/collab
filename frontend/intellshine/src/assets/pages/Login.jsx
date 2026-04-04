@@ -28,56 +28,55 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-lg w-[420px]"
-      >
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+      <form onSubmit={handleSubmit} className="card p-8 w-[420px]">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
           Login to IntelliShine
         </h2>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-1 text-gray-700">
+          <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
             Email Address
           </label>
           <input
             type="email"
             name="email"
-            className="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="input"
             onChange={handleChange}
             required
           />
         </div>
 
         <div className="mb-3">
-          <label className="block text-sm font-medium mb-1 text-gray-700">
+          <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
             Password
           </label>
           <input
             type="password"
             name="password"
-            className="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="input"
             onChange={handleChange}
             required
           />
         </div>
 
         {error && (
-          <p className="text-red-600 text-sm mb-3 font-medium">
-            {error}
-          </p>
+          <p className="text-red-600 text-sm mb-3 font-medium">{error}</p>
         )}
 
-        <button className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800 transition font-semibold">
-          Login
-        </button>
+        <button className="w-full btn btn-primary font-semibold">Login</button>
 
         <div className="flex justify-between text-sm mt-4">
-          <Link to="/forgot-password" className="text-blue-600 hover:underline">
+          <Link
+            to="/forgot-password"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
             Forgot Password?
           </Link>
-          <Link to="/register" className="text-blue-600 hover:underline">
+          <Link
+            to="/register"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
             Create Account
           </Link>
         </div>

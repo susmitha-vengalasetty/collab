@@ -29,6 +29,8 @@ import BookFinder from "./assets/pages/BookFinder";
 import Newspaper from "./assets/pages/Newspaper";
 
 import { AuthProvider, AuthContext } from "./assets/context/AuthContext";
+import { Toaster, toast } from "react-hot-toast";
+import "./App.css";
 
 /* ================= Wrapper Component ================= */
 
@@ -38,33 +40,40 @@ function AppContent() {
   const [pageLoading, setPageLoading] = useState(true);
 
   useEffect(() => {
-  const timer = setTimeout(() => {
-    setPageLoading(false);
-  }, 1500);
+    const timer = setTimeout(() => {
+      setPageLoading(false);
+    }, 1500);
 
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-if (pageLoading) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-blue-700 animate-pulse">
-          IntelliShine
-        </h1>
-        <p className="text-gray-600 mt-3">
-          Preparing your structured learning dashboard...
-        </p>
+  // Force dark theme permanently
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }, []);
+
+  if (pageLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-blue-400 animate-pulse">
+            IntelliShine
+          </h1>
+          <p className="text-gray-300 mt-3">
+            Preparing your structured learning dashboard...
+          </p>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   return (
     <>
       <Navbar setChatOpen={setChatOpen} />
 
-      <main className="pt-20 min-h-screen bg-gray-100 flex flex-col">
+      <main className="pt-20 min-h-screen max-w-7xl mx-auto bg-gray-900 flex flex-col">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Login />} />
@@ -80,10 +89,7 @@ if (pageLoading) {
           <Route path="/mock-test/history" element={<MockTestHistory />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/newspaper" element={<Newspaper />} />
-          
 
-
-    
           {/* Private Routes */}
           <Route
             path="/dashboard"
@@ -121,49 +127,58 @@ if (pageLoading) {
             }
           />
 
-            <Route
-              path="/profile"
-              element={
-                <PrivateRoute>
-                <Profile/>
-                </PrivateRoute>
-              }
-              />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            }
+          />
 
           <Route
-              path="/study-diary"
-              element={
+            path="/study-diary"
+            element={
               <PrivateRoute>
-              <StudyDiary />
+                <StudyDiary />
               </PrivateRoute>
-              }
-              />
+            }
+          />
 
-            <Route
-                path="/resume-analyzer"
-                element={
-                  <PrivateRoute>
-                    <ResumeAnalyzer />
-                  </PrivateRoute>
-                }
-              />
-            
-            <Route
-              path="/books"
-              element={
-                <PrivateRoute>
-                  <BookFinder />
-                </PrivateRoute>
-              }
-            />
+          <Route
+            path="/resume-analyzer"
+            element={
+              <PrivateRoute>
+                <ResumeAnalyzer />
+              </PrivateRoute>
+            }
+          />
 
-            
-              
+          <Route
+            path="/books"
+            element={
+              <PrivateRoute>
+                <BookFinder />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </main>
 
       <Footer />
       <AskAi open={chatOpen} setOpen={setChatOpen} />
+
+      {/* Global toaster for non-intrusive feedback */}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: "var(--toast-bg, #fff)",
+            color: "var(--toast-fg, #111)",
+          },
+          className: "shadow-lg border border-gray-200 dark:border-gray-800",
+        }}
+      />
     </>
   );
 }
@@ -174,9 +189,9 @@ function App() {
   return (
     <AuthProvider>
       <MockTestProvider>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
       </MockTestProvider>
     </AuthProvider>
   );

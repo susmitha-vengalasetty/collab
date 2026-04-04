@@ -73,22 +73,22 @@ const AcademicTutor = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-24 px-6">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-900 pt-24 px-6 transition-colors">
       <div className="max-w-4xl mx-auto">
 
         <div className="mb-10 text-center">
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             📚 Academic Tutor
           </h1>
-          <p className="text-gray-500 mt-2 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">
             Structured explanations for serious learners.
           </p>
         </div>
 
-        <div className="bg-white p-8 rounded-2xl shadow-md border mb-12">
+        <div className="card p-8 mb-12">
 
           {error && (
-            <div className="bg-red-100 text-red-600 p-3 rounded mb-4 text-sm">
+            <div className="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 p-3 rounded mb-4 text-sm">
               {error}
             </div>
           )}
@@ -98,7 +98,7 @@ const AcademicTutor = () => {
             <select
               value={mood}
               onChange={(e) => setMood(e.target.value)}
-              className="w-full border p-3 rounded-lg"
+              className="input"
             >
               {moodOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -112,13 +112,13 @@ const AcademicTutor = () => {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="Ask your academic doubt..."
-              className="w-full border p-3 rounded-lg"
+              className="input"
             />
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-medium"
+              className="w-full btn btn-secondary"
             >
               {loading ? "Generating..." : "Ask Tutor"}
             </button>
@@ -127,7 +127,7 @@ const AcademicTutor = () => {
               <button
                 type="button"
                 onClick={stopGeneration}
-                className="w-full text-red-500 text-sm"
+                className="w-full btn btn-ghost text-red-500 dark:text-red-400 text-sm"
               >
                 Stop Generation
               </button>
@@ -140,33 +140,33 @@ const AcademicTutor = () => {
           {doubts.map((doubt) => (
             <div
               key={doubt._id}
-              className="bg-white border rounded-2xl p-6 shadow-sm"
+              className="card p-6"
             >
               <div className="flex justify-between items-center mb-2">
-                <p className="text-sm text-indigo-600">
+                <p className="text-sm text-indigo-600 dark:text-indigo-400">
                   Mood: {doubt.moodAtTime}
                 </p>
 
                 <button
                   onClick={() => handleDelete(doubt._id)}
-                  className="text-xs text-red-500"
+                  className="text-xs text-red-500 dark:text-red-400"
                 >
                   Delete
                 </button>
               </div>
 
-              <h3 className="font-semibold text-gray-900 mb-3">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">
                 Q: {doubt.question}
               </h3>
 
               <div
-                className="prose prose-sm max-w-none"
+                className="prose prose-sm max-w-none dark:prose-invert"
                 dangerouslySetInnerHTML={{
                   __html: marked(doubt.answer)
                 }}
               />
 
-              <p className="text-xs text-gray-400 mt-4">
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-4">
                 {new Date(doubt.createdAt).toLocaleString()}
               </p>
             </div>

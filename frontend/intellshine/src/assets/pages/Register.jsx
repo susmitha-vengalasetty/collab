@@ -7,7 +7,7 @@ const Register = () => {
     name: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
 
   const [error, setError] = useState("");
@@ -33,7 +33,7 @@ const Register = () => {
       await API.post("/auth/register", {
         name: form.name,
         email: form.email,
-        password: form.password
+        password: form.password,
       });
 
       setSuccess("Account created successfully! Redirecting...");
@@ -44,12 +44,9 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-lg w-[420px]"
-      >
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+      <form onSubmit={handleSubmit} className="card p-8 w-[420px]">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
           Create IntelliShine Account
         </h2>
 
@@ -60,7 +57,7 @@ const Register = () => {
           type="text"
           name="name"
           placeholder="Full Name"
-          className="w-full border p-2 rounded-lg mb-3 focus:ring-2 focus:ring-blue-500"
+          className="input mb-3"
           onChange={handleChange}
           required
         />
@@ -69,7 +66,7 @@ const Register = () => {
           type="email"
           name="email"
           placeholder="Email Address"
-          className="w-full border p-2 rounded-lg mb-3 focus:ring-2 focus:ring-blue-500"
+          className="input mb-3"
           onChange={handleChange}
           required
         />
@@ -78,7 +75,7 @@ const Register = () => {
           type="password"
           name="password"
           placeholder="Password"
-          className="w-full border p-2 rounded-lg mb-3 focus:ring-2 focus:ring-blue-500"
+          className="input mb-3"
           onChange={handleChange}
           required
         />
@@ -87,18 +84,21 @@ const Register = () => {
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
-          className="w-full border p-2 rounded-lg mb-4 focus:ring-2 focus:ring-blue-500"
+          className="input mb-4"
           onChange={handleChange}
           required
         />
 
-        <button className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800 transition font-semibold">
+        <button className="w-full btn btn-secondary font-semibold">
           Create Account
         </button>
 
         <p className="text-sm text-center mt-4">
           Already have an account?{" "}
-          <Link to="/" className="text-blue-600 hover:underline">
+          <Link
+            to="/"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
             Login
           </Link>
         </p>

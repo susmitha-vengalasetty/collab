@@ -6,7 +6,7 @@ const moodOptions = [
   { value: "motivated", label: "Motivated 🚀" },
   { value: "normal", label: "Normal 🙂" },
   { value: "tired", label: "Tired 😴" },
-  { value: "stressed", label: "Stressed 😰" }
+  { value: "stressed", label: "Stressed 😰" },
 ];
 
 const CreatePlan = () => {
@@ -78,7 +78,7 @@ const CreatePlan = () => {
       const response = await API.post("/studyplan", {
         mood,
         totalHoursPerDay: Number(hours),
-        subjects
+        subjects,
       });
 
       console.log("Remaining AI calls:", response.data.remainingAiCalls);
@@ -86,7 +86,9 @@ const CreatePlan = () => {
       navigate("/dashboard");
     } catch (err) {
       if (err.response?.status === 429) {
-        setError("🚫 Daily AI limit reached. Try again tomorrow after 5:30 AM.");
+        setError(
+          "🚫 Daily AI limit reached. Try again tomorrow after 5:30 AM.",
+        );
       } else {
         setError(err.response?.data?.message || "Failed to create plan.");
       }
@@ -96,40 +98,37 @@ const CreatePlan = () => {
   };
 
   return (
-    <div className="px-6 py-12 flex justify-center bg-gray-50 min-h-screen">
-
-      <div className="relative w-full max-w-2xl bg-white p-10 rounded-2xl shadow-xl">
-
+    <div className="px-6 py-12 flex justify-center bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
+      <div className="relative w-full max-w-2xl card p-8">
         {/* ❌ Close Button */}
         <button
           onClick={() => navigate("/dashboard")}
-          className="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl"
+          className="absolute top-5 right-5 text-gray-400 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 text-xl"
         >
           ✕
         </button>
 
-        <h1 className="text-3xl font-bold mb-8 text-gray-900">
+        <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">
           Create Study Plan
         </h1>
 
         {error && (
-          <div className="bg-red-100 text-red-600 p-3 rounded mb-6 text-sm">
+          <div className="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 p-3 rounded mb-6 text-sm">
             {error}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-8">
-
+        <form onSubmit={handleSubmit} className="space-y-6">
           {/* Mood */}
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
               Mood
             </label>
 
             <select
               value={mood}
               onChange={(e) => setMood(e.target.value)}
-              className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="input"
             >
               {moodOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -141,7 +140,7 @@ const CreatePlan = () => {
 
           {/* Hours */}
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
               Total Study Hours Per Day
             </label>
 
@@ -150,30 +149,28 @@ const CreatePlan = () => {
               min="1"
               max="16"
               value={hours}
-              onChange={(e) =>
-                setHours(Math.max(1, Number(e.target.value)))
-              }
-              className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setHours(Math.max(1, Number(e.target.value)))}
+              className="input"
             />
           </div>
 
           {/* Subjects */}
           <div>
-            <label className="block text-sm font-medium mb-3">
+            <label className="block text-sm font-medium mb-3 text-gray-700 dark:text-gray-300">
               Subjects & Priority
             </label>
 
             {subjects.map((sub, index) => (
-              <div key={index} className="flex gap-3 mb-3 items-center">
-
+              <div
+                key={index}
+                className="grid grid-cols-12 gap-3 mb-2 items-center"
+              >
                 <input
                   type="text"
                   placeholder="Subject Name"
                   value={sub.name}
-                  onChange={(e) =>
-                    handleChange(index, "name", e.target.value)
-                  }
-                  className="flex-1 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onChange={(e) => handleChange(index, "name", e.target.value)}
+                  className="input col-span-7"
                 />
 
                 <input
@@ -184,39 +181,39 @@ const CreatePlan = () => {
                   onChange={(e) =>
                     handleChange(index, "priority", e.target.value)
                   }
-                  className="w-24 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="input col-span-3"
                 />
 
                 {subjects.length > 1 && (
                   <button
                     type="button"
                     onClick={() => removeSubject(index)}
-                    className="text-red-500 text-sm hover:underline"
+                    className="col-span-2 btn btn-ghost text-red-500 dark:text-red-400 text-sm justify-self-end"
                   >
                     Remove
                   </button>
                 )}
-
               </div>
             ))}
 
-            <button
-              type="button"
-              onClick={addSubject}
-              className="text-blue-600 text-sm font-medium hover:underline"
-            >
-              + Add Subject
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="button"
+                onClick={addSubject}
+                className="btn btn-ghost text-blue-600 dark:text-blue-400 text-sm font-medium"
+              >
+                + Add Subject
+              </button>
+            </div>
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-lg font-medium transition"
+            className="w-full btn btn-secondary font-medium mt-2"
           >
             {loading ? "Generating Plan..." : "Generate Study Plan"}
           </button>
-
         </form>
       </div>
     </div>

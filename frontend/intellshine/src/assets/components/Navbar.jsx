@@ -26,33 +26,29 @@ const Navbar = ({ setChatOpen }) => {
     { label: "Book Referencing", path: "/books" },
     { label: "Mock Tests", path: "/mock-test" },
     { label: "Mock Test History", path: "/mock-test/history" },
-    { label: "Ask AI", action: () => setChatOpen(true) }
+    { label: "Ask AI", action: () => setChatOpen(true) },
   ];
 
   const growthItems = [
-  { label: "AI Resume Analyzer", path: "/resume-analyzer" },
-  { label: "Study Diary", path: "/study-diary" },
-  { label: "Current Affairs", path: "/newspaper" }
-];
-
-  const resourceItems = [
-    { label: "YouTube Library", path: "/youtube" }
+    { label: "AI Resume Analyzer", path: "/resume-analyzer" },
+    { label: "Study Diary", path: "/study-diary" },
+    { label: "Current Affairs", path: "/newspaper" },
   ];
+
+  const resourceItems = [{ label: "YouTube Library", path: "/youtube" }];
 
   const profileItems = [
     { label: "My Profile", path: "/profile" },
-    { label: "Focus Time", path: "/focus-time" }
+    { label: "Focus Time", path: "/focus-time" },
   ];
 
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
+      <nav className="nav-glass fixed top-0 left-0 w-full z-50 transition-colors">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-gray-900 dark:text-gray-100">
           {/* ===== Logo Section ===== */}
           <div className="flex items-center space-x-3">
-
             <img
               src={logo}
               alt="logo"
@@ -62,35 +58,36 @@ const Navbar = ({ setChatOpen }) => {
 
             <Link
               to="/"
-              className="text-2xl font-bold text-blue-700 tracking-wide"
+              className="text-2xl font-bold text-blue-700 dark:text-blue-400 tracking-wide"
             >
               IntelliShine
             </Link>
-
           </div>
 
           {/* ===== Desktop Menu ===== */}
-          <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-
+          <div className="hidden md:flex items-center space-x-3 font-medium">
             {!userToken ? (
               <>
                 <Link
                   to="/"
-                  className="text-blue-700 font-semibold hover:underline"
+                  className="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-gray-700 transition text-gray-800 dark:text-gray-200 font-semibold"
                 >
                   Login
                 </Link>
 
                 <Link
                   to="/register"
-                  className="bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition"
+                  className="bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition dark:bg-blue-600 dark:hover:bg-blue-700"
                 >
                   Register
                 </Link>
               </>
             ) : (
               <>
-                <Link to="/dashboard" className="hover:text-blue-600">
+                <Link
+                  to="/dashboard"
+                  className="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-gray-700 transition text-black dark:text-gray-200 font-semibold"
+                >
                   Dashboard
                 </Link>
 
@@ -101,25 +98,23 @@ const Navbar = ({ setChatOpen }) => {
 
                 <button
                   onClick={handleLogout}
-                  className="text-red-600 hover:text-red-700"
+                  className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-gray-700 transition"
                 >
                   Logout
                 </button>
               </>
             )}
-
           </div>
 
           {/* ===== Mobile Menu Button ===== */}
           {userToken && (
             <button
-              className="md:hidden text-2xl text-blue-700"
+              className="md:hidden text-2xl text-blue-700 dark:text-blue-400"
               onClick={() => setMobileOpen(true)}
             >
               ☰
             </button>
           )}
-
         </div>
       </nav>
 
@@ -127,13 +122,11 @@ const Navbar = ({ setChatOpen }) => {
 
       {logoOpen && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-[1000]">
-
-          <div className="bg-white rounded-2xl shadow-xl p-10 w-[420px] relative text-center animate-fadeIn">
-
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-10 w-[420px] relative text-center animate-fadeIn text-gray-900 dark:text-gray-100">
             {/* Close Button */}
             <button
               onClick={() => setLogoOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 text-2xl"
             >
               ✕
             </button>
@@ -145,36 +138,31 @@ const Navbar = ({ setChatOpen }) => {
               className="w-44 h-44 mx-auto mb-6 object-contain"
             />
 
-            <h2 className="text-2xl font-bold text-blue-700">
+            <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400">
               IntelliShine
             </h2>
 
-            <p className="text-gray-600 text-sm mt-3">
+            <p className="text-gray-600 dark:text-gray-300 text-sm mt-3">
               AI Powered Study Productivity Platform
             </p>
 
             <div className="mt-6">
-
               <Link
                 to="/dashboard"
                 onClick={() => setLogoOpen(false)}
-                className="block bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+                className="block bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
               >
                 Go to Dashboard
               </Link>
-
             </div>
-
           </div>
-
         </div>
       )}
 
       {/* ================= MOBILE MENU ================= */}
 
       {mobileOpen && userToken && (
-        <div className="fixed inset-0 bg-white z-[999] overflow-y-auto pt-24 px-6 pb-10 md:hidden">
-
+        <div className="fixed inset-0 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 z-[999] overflow-y-auto pt-24 px-6 pb-10 md:hidden transition-colors">
           <button
             onClick={() => setMobileOpen(false)}
             className="fixed top-5 right-5 text-xl"
@@ -190,7 +178,9 @@ const Navbar = ({ setChatOpen }) => {
             Dashboard
           </Link>
 
-          <p className="font-semibold text-gray-800 mb-2">Learning</p>
+          <p className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+            Learning
+          </p>
 
           {learningItems.map((item, i) =>
             item.action ? (
@@ -200,7 +190,7 @@ const Navbar = ({ setChatOpen }) => {
                   setMobileOpen(false);
                   item.action();
                 }}
-                className="block ml-4 mb-3 text-gray-600"
+                className="block ml-4 mb-3 text-gray-600 dark:text-gray-300"
               >
                 {item.label}
               </button>
@@ -208,47 +198,53 @@ const Navbar = ({ setChatOpen }) => {
               <Link
                 key={i}
                 to={item.path}
-                className="block ml-4 mb-3 text-gray-600"
+                className="block ml-4 mb-3 text-gray-600 dark:text-gray-300"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
               </Link>
-            )
+            ),
           )}
 
-          <p className="font-semibold text-gray-800 mt-6 mb-2">Growth</p>
+          <p className="font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-2">
+            Growth
+          </p>
 
           {growthItems.map((item, i) => (
             <Link
               key={i}
               to={item.path}
-              className="block ml-4 mb-3 text-gray-600"
+              className="block ml-4 mb-3 text-gray-600 dark:text-gray-300"
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
             </Link>
           ))}
 
-          <p className="font-semibold text-gray-800 mt-6 mb-2">Resources</p>
+          <p className="font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-2">
+            Resources
+          </p>
 
           {resourceItems.map((item, i) => (
             <Link
               key={i}
               to={item.path}
-              className="block ml-4 mb-3 text-gray-600"
+              className="block ml-4 mb-3 text-gray-600 dark:text-gray-300"
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
             </Link>
           ))}
 
-          <p className="font-semibold text-gray-800 mt-6 mb-2">Profile</p>
+          <p className="font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-2">
+            Profile
+          </p>
 
           {profileItems.map((item, i) => (
             <Link
               key={i}
               to={item.path}
-              className="block ml-4 mb-3 text-gray-600"
+              className="block ml-4 mb-3 text-gray-600 dark:text-gray-300"
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
@@ -260,11 +256,10 @@ const Navbar = ({ setChatOpen }) => {
               setMobileOpen(false);
               handleLogout();
             }}
-            className="block text-red-600 mt-8"
+            className="block text-red-600 dark:text-red-400 mt-8"
           >
             Logout
           </button>
-
         </div>
       )}
     </>

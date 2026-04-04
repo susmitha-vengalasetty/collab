@@ -14,7 +14,7 @@ const ResetPassword = () => {
 
     try {
       await API.post(`/auth/reset-password/${token}`, {
-        newPassword: password
+        newPassword: password,
       });
       setMessage("Password reset successful.");
     } catch (error) {
@@ -23,9 +23,9 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-[400px]">
-        <h2 className="text-2xl font-bold mb-5 text-gray-800">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors">
+      <div className="card p-8 w-[400px]">
+        <h2 className="text-2xl font-bold mb-5 text-gray-800 dark:text-gray-100">
           Reset Password
         </h2>
 
@@ -35,14 +35,11 @@ const ResetPassword = () => {
         <input
           type="password"
           placeholder="Enter new password"
-          className="w-full border p-2 rounded-lg mb-4 focus:ring-2 focus:ring-blue-500"
+          className="input mb-4"
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button
-          onClick={handleReset}
-          className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800"
-        >
+        <button onClick={handleReset} className="w-full btn btn-primary">
           Reset Password
         </button>
       </div>
