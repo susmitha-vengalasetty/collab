@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -76,12 +77,12 @@ setBooks(JSON.parse(savedBooks));
 const fetchBooks=async()=>{
 
 if(!subject||!goal){
-alert("Please enter subject and goal");
+toast.error("Please enter subject and goal");
 return;
 }
 
 if(!isAcademicSearch(subject)){
-alert("Please search academic or knowledge related subjects");
+toast.error("Please search academic or knowledge related subjects");
 return;
 }
 
@@ -132,11 +133,9 @@ JSON.stringify(updated)
 );
 
 }catch(err){
-
 console.error(err);
 setLoading(false);
-alert("Failed to fetch books");
-
+toast.error("Failed to fetch books");
 }
 
 };

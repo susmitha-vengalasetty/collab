@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 
 const StudyDiary = () => {
@@ -26,7 +27,7 @@ const StudyDiary = () => {
 
   const analyzeDiary = async () => {
     if (!text.trim()) {
-      alert("Please write today's reflection");
+      toast.error("Please write today's reflection");
       return;
     }
 
@@ -44,7 +45,7 @@ const StudyDiary = () => {
       fetchHistory();
     } catch (err) {
       console.log(err);
-      alert("Error analyzing diary");
+      toast.error("Error analyzing diary");
     }
   };
 

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 
 const Profile = () => {
@@ -71,7 +72,7 @@ const Profile = () => {
 
     // Allow only images
     if (!file.type.startsWith("image/")) {
-      alert("Please upload a valid image file.");
+      toast.error("Please upload a valid image file.");
       return;
     }
 
@@ -79,7 +80,7 @@ const Profile = () => {
     const MAX_SIZE = 2 * 1024 * 1024;
 
     if (file.size > MAX_SIZE) {
-      alert("Image must be smaller than 2MB");
+      toast.error("Image must be smaller than 2MB");
       return;
     }
 
@@ -112,7 +113,7 @@ const Profile = () => {
     e.preventDefault();
 
     if (!token) {
-      alert("Session expired. Please login again.");
+      toast.error("Session expired. Please login again.");
       return;
     }
 
@@ -132,7 +133,7 @@ const Profile = () => {
         },
       );
 
-      alert("Profile Updated Successfully");
+      toast.success("Profile Updated Successfully");
 
       setIsEditing(false);
     } catch (error) {

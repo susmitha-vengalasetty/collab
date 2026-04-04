@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { FiMaximize, FiMinimize, FiX, FiSend, FiTrash2 } from "react-icons/fi";
 
 const AskAi = ({ open, setOpen }) => {
   const [messages, setMessages] = useState([]);
@@ -145,10 +146,20 @@ const AskAi = ({ open, setOpen }) => {
             </div>
 
             <div className="flex gap-3 text-lg">
-              <button onClick={() => setFullscreen(!fullscreen)}>
-                {fullscreen ? "🗗" : "🗖"}
+              <button
+                onClick={() => setFullscreen(!fullscreen)}
+                aria-label={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                className="hover:opacity-90"
+              >
+                {fullscreen ? <FiMinimize /> : <FiMaximize />}
               </button>
-              <button onClick={() => setOpen(false)}>✕</button>
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close"
+                className="hover:opacity-90"
+              >
+                <FiX />
+              </button>
             </div>
           </div>
 
@@ -213,17 +224,18 @@ const AskAi = ({ open, setOpen }) => {
             ))}
 
             {loading && (
-              <p className="text-sm text-blue-600 dark:text-blue-400">
-                Generating response...
-              </p>
+              <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></span>
+                <span>Generating response...</span>
+              </div>
             )}
 
             {isTyping && (
               <button
                 onClick={stopTyping}
-                className="text-red-600 dark:text-red-400 text-sm underline"
+                className="inline-flex items-center gap-2 text-red-600 dark:text-red-400 text-sm underline"
               >
-                Stop Generating
+                <FiX /> Stop Generating
               </button>
             )}
 
@@ -243,13 +255,16 @@ const AskAi = ({ open, setOpen }) => {
             <div className="flex justify-between">
               <button
                 onClick={clearChat}
-                className="btn btn-ghost text-blue-700 dark:text-blue-400"
+                className="btn btn-ghost text-blue-700 dark:text-blue-400 inline-flex items-center gap-2"
               >
-                Clear
+                <FiTrash2 /> Clear
               </button>
 
-              <button onClick={sendMessage} className="btn btn-primary px-6">
-                Send
+              <button
+                onClick={sendMessage}
+                className="btn btn-primary px-6 inline-flex items-center gap-2"
+              >
+                <FiSend /> Send
               </button>
             </div>
           </div>

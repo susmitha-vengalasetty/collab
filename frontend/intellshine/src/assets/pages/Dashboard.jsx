@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import API from "../services/api";
 import jsPDF from "jspdf";
 import { useNavigate } from "react-router-dom";
@@ -83,7 +84,7 @@ const Dashboard = () => {
         day,
       });
 
-      alert(`Plan assigned to ${day}`);
+      toast.success(`Plan assigned to ${day}`);
 
       const { data } = await API.get("/studyplan");
       setPlans(data);
@@ -96,7 +97,7 @@ const Dashboard = () => {
     try {
       await API.put("/studyplan/assign-week", { planId });
 
-      alert("Plan assigned for whole week");
+      toast.success("Plan assigned for whole week");
 
       const { data } = await API.get("/studyplan");
       setPlans(data);
@@ -115,7 +116,7 @@ const Dashboard = () => {
       setSelectedPlan(null);
     } catch (err) {
       console.error(err);
-      alert("Failed to delete plan.");
+      toast.error("Failed to delete plan.");
     }
   };
 
@@ -501,7 +502,10 @@ const Dashboard = () => {
           </h2>
 
           {statsLoading && (
-            <p className="text-gray-500">Loading performance data...</p>
+            <div className="flex items-center gap-2 text-gray-500">
+              <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-gray-400 border-t-transparent"></span>
+              <span>Loading performance data...</span>
+            </div>
           )}
 
           {testStats && testStats.totalTests === 0 && (

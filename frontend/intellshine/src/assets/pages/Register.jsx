@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import API from "../services/api";
+import { toast } from "react-hot-toast";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -12,6 +14,9 @@ const Register = () => {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [showPwd, setShowPwd] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,12 +29,21 @@ const Register = () => {
     setError("");
     setSuccess("");
 
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    if (form.password.length < 6) {
+      setError("Password should be at least 6 characters.");
+      return;
+    }
     if (form.password !== form.confirmPassword) {
       setError("Passwords do not match.");
       return;
     }
 
     try {
+      setLoading(true);
       await API.post("/auth/register", {
         name: form.name,
         email: form.email,
@@ -37,9 +51,14 @@ const Register = () => {
       });
 
       setSuccess("Account created successfully! Redirecting...");
+      toast.success("Account created successfully!");
       setTimeout(() => navigate("/"), 2000);
     } catch (error) {
-      setError(error.response?.data?.message || "Registration failed.");
+      const msg = error.response?.data?.message || "Registration failed.";
+      setError(msg);
+      toast.error(msg);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -71,26 +90,54 @@ const Register = () => {
           required
         />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="input mb-3"
-          onChange={handleChange}
-          required
-        />
+        <div className="mb-3 relative">
+          <input
+            type={showPwd ? "text" : "password"}
+            name="password"
+            placeholder="Password"
+            className="input pr-10"
+            onChange={handleChange}
+            required
+          />
+          <button
+            type="button"
+            onClick={() => setShowPwd((s) => !s)}
+            className="absolute inset-y-0 right-2 my-auto px-2 py-1 rounded-md  border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200"
+          >
+            {showPwd ? <FiEyeOff /> : <FiEye />}
+          </button>
+        </div>
 
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          className="input mb-4"
-          onChange={handleChange}
-          required
-        />
+        <div className="mb-4 relative">
+          <input
+            type={showConfirm ? "text" : "password"}
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            className="input pr-10"
+            onChange={handleChange}
+            required
+          />
+          <button
+            type="button"
+            onClick={() => setShowConfirm((s) => !s)}
+            className="absolute inset-y-0 right-2 my-auto px-2 py-1 rounded-md  border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200"
+          >
+            {showConfirm ? <FiEyeOff /> : <FiEye />}
+          </button>
+        </div>
 
-        <button className="w-full btn btn-secondary font-semibold">
-          Create Account
+        <button
+          className="w-full btn btn-secondary font-semibold"
+          disabled={loading}
+        >
+          {loading ? (
+            <span className="inline-flex items-center gap-2">
+              <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+              Creating...
+            </span>
+          ) : (
+            "Create Account"
+          )}
         </button>
 
         <p className="text-sm text-center mt-4">
